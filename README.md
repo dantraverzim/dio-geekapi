@@ -123,6 +123,14 @@ https://dio-geekapi.herokuapp.com/api/v1/geek/about
 }
 ```
 
+<h3>Exemplo método DELETE</h3>
+
+* Delete por Id
+```
+https://dio-geekapi.herokuapp.com/api/v1/geek/{id}
+```
+
+
 Versões e ferramentas usados no projeto:
 
 * Java 11.0.11
