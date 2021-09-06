@@ -1,5 +1,6 @@
 package portifolio.geekapi.controller;
 
+import org.springframework.boot.info.BuildProperties;
 import portifolio.geekapi.dto.request.GeekDTO;
 import portifolio.geekapi.dto.response.MessageResponseDTO;
 import portifolio.geekapi.exception.GeekNotFoundException;
@@ -23,6 +24,13 @@ import java.util.List;
 @RequestMapping("api/v1/geek")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class GeekApiController {
+
+    private BuildProperties buildProperties;
+
+    @GetMapping("/about")
+    public String about() {
+        return "app-->" + buildProperties.getName() + " version-->" + buildProperties.getVersion();
+    }
 
     private GeekService geekService;
 
